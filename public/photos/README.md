@@ -1,0 +1,1 @@
+Add photo1.jpg, photo2.jpg, and photo3.jpg here, or edit src/config/birthdayConfig.js to match your own filenames. Missing photos show illustrated placeholders. Add only photos you have permission to share.
