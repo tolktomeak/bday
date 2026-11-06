@@ -1,3 +1,4 @@
+export function NightSky() { return <div className="night-sky" aria-hidden="true"><span className="little-moon">☾</span>{Array.from({length:21},(_,i)=><i key={i} style={{left:`${(i*31+9)%94}%`,top:`${(i*17+3)%87}%`,animationDelay:`${-i*.3}s`}}>✦</i>)}<svg className="fairy-lights" viewBox="0 0 400 100"><path d="M0 10Q200 120 400 10" fill="none" stroke="#e8bba58c"/>{[25,70,115,160,205,250,295,340,385].map(x=><g key={x}><path d={`M${x} ${10+110*(x/400)*(1-x/400)*2}v12`} stroke="#e6b7a9"/><circle cx={x} cy={22+110*(x/400)*(1-x/400)*2} r="3" fill="#ffebc6"/></g>)}</svg></div>; }
 export function Teddy({ className = '' }) {
   return <svg className={className} viewBox="0 0 500 490" role="img" aria-label="A cuddly teddy bear holding a pink heart, sitting on a birthday present"><defs>
     <radialGradient id="fur" cx="38%" cy="25%"><stop stopColor="#fff0d9"/><stop offset=".64" stopColor="#dfb891"/><stop offset="1" stopColor="#b88060"/></radialGradient>

@@ -1,1 +1,1 @@
-Add photo1.jpg, photo2.jpg, and photo3.jpg here, or edit src/config/birthdayConfig.js to match your own filenames. Missing photos show illustrated placeholders. Add only photos you have permission to share.
+Monica's six supplied photos are included unchanged as monica-1.jpg through monica-6.jpg, in the order they were supplied. The first photo appears in the birthday reveal; all six appear in the memories gallery. Edit src/config/birthdayConfig.js to change the order, captions, notes, or image framing. Missing files show illustrated placeholders.

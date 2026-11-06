@@ -6,5 +6,5 @@ export function useAudio(enabled) {
  const chime=useCallback(async()=>{if(!enabled)return;try{const ctx=await getContext();[659.25,783.99,1046.5].forEach((f,i)=>tone(ctx,f,ctx.currentTime+i*.12,.65,.035));}catch{setError('Sound is unavailable in this browser.');}},[enabled,getContext]);
  async function toggle(){if(playing){clearInterval(timer.current);timer.current=null;await context.current?.suspend();setPlaying(false);return;}try{const ctx=await getContext();const notes=[523.25,659.25,783.99,659.25,587.33,698.46,880,783.99];let i=0;const play=()=>{tone(ctx,notes[i++%notes.length],ctx.currentTime,1.6,.035);};play();timer.current=setInterval(play,650);setPlaying(true);setError('');}catch{setError('Sound is unavailable in this browser.');}}
  useEffect(()=>()=>{clearInterval(timer.current);context.current?.close();},[]);
- return {playing,toggle,chime,error};
+ return {playing,toggle,chime,error,clearError:()=>setError('')};
 }
